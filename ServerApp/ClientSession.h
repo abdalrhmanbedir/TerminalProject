@@ -5,12 +5,11 @@
 #include <QThread>
 #include <QTcpSocket>
 #include <QByteArray>
-
 #include "Protocol.h"
 
 class CommandDispatcher;
 
-class ClientSession : public QThread {
+class ClientSession : public QThread{
     Q_OBJECT
 public:
     ClientSession(QTcpSocket* socket, CommandDispatcher* dispatcher, QObject* parent=nullptr);
